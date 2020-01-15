@@ -55,9 +55,6 @@ export default function Subscribers() {
                                 <Link to={ `/subscriber/show/${ subscriber.id }` } className="btn btn-success">
                                     <i className="fas fa-eye"></i> View
                                 </Link>
-                                <Link to={`/subscriber/edit/${ subscriber.id }`} className="btn btn-info ml-2">
-                                    <i className="fas fa-pencil-alt"></i>  Edit
-                                </Link>
                                 <button className="btn btn-danger ml-2" onClick={ () => deleteSubscriber(subscriber.id) }>
                                     <i className="fas fa-trash-alt"></i> Delete
                                 </button>

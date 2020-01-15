@@ -8,12 +8,24 @@ import UpdateSubscriber from './components/Subscribers/UpdateSubscriber';
 import ShowSubscriber from './components/Subscribers/ShowSubscriber';
 import Navbar from './components/Layout/Navbar';
 
+import Books from './components/Books/Books';
+import NewBook from './components/Books/NewBook';
+import ShowBook from './components/Books/ShowBook';
+import UpdateBook from './components/Books/UpdateBook';
+import LendBook from './components/Books/LendBook';
+
 function Routes() {
   return (
     <Router>
       <Navbar/>
       <div className="container">
         <Switch>
+            <Route exact path='/books' component={ Books }/>
+            <Route exact path='/book/new' component={ NewBook }/>
+            <Route exact path='/book/show/:id' component={ ShowBook }/>
+            <Route exact path='/book/edit/:id' component={ UpdateBook }/>
+            <Route exact path='/book/lend/:id' component={ LendBook }/>
+            
             <Route exact path='/subscribers' component={ Subscribers }/>
             <Route exact path='/subscriber/new' component={ NewSubscriber }/>
             <Route exact path='/subscriber/show/:id' component={ ShowSubscriber }/>

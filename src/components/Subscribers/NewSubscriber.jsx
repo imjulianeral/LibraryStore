@@ -97,7 +97,7 @@ export default function NewSubscriber({ history }) {
                                     required
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary float-right">
                             <i className="fas fa-user-plus"></i> Add New Subscriber
                             </button>
                         </form>

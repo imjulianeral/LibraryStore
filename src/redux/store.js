@@ -5,7 +5,11 @@ import thunk from 'redux-thunk';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth';
 import 'firebase/analytics';
+
+// Custom Reducers
+import searchUserReducer from './reducers/searchUserReducer';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -32,7 +36,8 @@ const rrfConfig = {
 // Reducers
 const rootReducer = combineReducers({
     firebase: firebaseReducer,
-    firestore: firestoreReducer
+    firestore: firestoreReducer,
+    user: searchUserReducer
 });
 
 // Setting thunk in a middlewares array
